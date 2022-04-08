@@ -44,7 +44,7 @@ Open the [Google Cloud Console](https://console.cloud.google.com), access your p
 ### 3. Create a .env file
 Inside the **client** folder, create a
 ```.env``` file
-containing the keys to your firebase app, paypal app, and plan_id as:
+containing the keys to your firebase app:
 ```
 REACT_APP_FIREBASE_API_KEY=<apiKey>
 REACT_APP_FIREBASE_AUTH_DOMAIN=<authDomain>
