@@ -9,6 +9,6 @@
     "install": "cd client && npm install && cd ../server && npm install",
     "start": "node server/index.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "davidshivaji",
+  "license": "MIT"
 }
