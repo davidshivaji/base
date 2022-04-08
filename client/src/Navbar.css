@@ -1,0 +1,48 @@
+.navwrap {
+  /* border: solid 10px white; */
+   display: flex;
+   justify-content: center;
+   overflow: hidden;
+   /* z-index: 51; */
+   width: 100%;
+   height: 100%;
+   box-sizing: border-box;
+   padding: 30px;
+   /* border: solid 1px blue; */
+}
+
+.navigator {
+  box-sizing: border-box;
+  /* border: solid 1px white; */
+  /* background: linear-gradient(#444,#222); */
+  /* background-color: rgba(25,25,25,1); */
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+  /* background-color: rgba(0,0,0,0.2); */
+  padding: 10px 0px;
+  width: calc(100% - 40px);
+  margin-top: 20px;
+  /* margin: 20px; */
+  /* margin: -5px -10px -10px -5px; */
+  border-radius: 10px;
+  /* align-items: center; */
+  /* display: inline-block; */
+  /* display: inline-block; */
+  /* width: 100%; */
+  /* box-shadow: inset 0px 0px 10px 50px rgba(255,255,255,0.2); */
+  position: fixed;
+  top: 0;
+  /* margin-top: -50px; */
+  z-index: 10;
+}
+
+
+.dotsvertical {
+  transition: all 220ms;
+}
+
+.dotshorizontal {
+  transform: rotate(-90deg);
+  transition: all 220ms;
+}
