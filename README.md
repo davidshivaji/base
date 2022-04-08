@@ -30,8 +30,8 @@ You can run the client react app without needing the server, unless you want to 
 
 ### 0. Clone this repo
 ```
-git clone https://github.com/davidshivaji/base5
-cd base5
+git clone https://github.com/davidshivaji/base
+cd base
 npm run full-install
 ```
 
@@ -82,6 +82,7 @@ REACT_APP_PAYPAL_SUBSCRIPTION_PLAN_ID=<paypal_subscription_plan_id>
 ### 7. Run App
 You can now use react-scripts commands to run the client app or build and deploy.
 ```
+cd client
 npm start
 ```
 
