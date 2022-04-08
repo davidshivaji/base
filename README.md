@@ -3,7 +3,7 @@
 An extensive boilerplate React App and Express Server using Firebase v7 + Google Cloud, and the PayPal Developer SDK.
 
 ## Live Demo
-[base.davidshivaji.com](https://base.davidshivaji.com)
+[base.davidshivaji.com](base.davidshivaji.com)
 
 - Basic Navbar with Customized Routes.
   - *App page is left empty.*
