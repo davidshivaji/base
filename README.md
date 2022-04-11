@@ -30,7 +30,7 @@ You can run the client react app without needing the server, unless you want to 
 
 ### 0. Clone this repo
 ```
-git clone https://github.com/davidshivaji/base
+git clone https://github.com/davidshivaji/base.git
 cd base
 npm run full-install
 ```
@@ -92,5 +92,3 @@ If you want to use the server, you will need a separate .env file inside server/
 For the example, I've used `REACT_APP_CMC_API_KEY` which will enable you to make calls to the coinmarketcap API.
 You can then make fetch/axios requests from anywhere in the client app which can directly reference the routes in the express server.
 To deploy, you will need to replace the proxy URL (localhost:5000) inside client/package.json with your server's heroku URL or wherever you decide to host your server.
-
-
