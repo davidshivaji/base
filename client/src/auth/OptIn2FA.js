@@ -58,7 +58,6 @@ const OptIn2FA = () => {
     const mfaProp = await user.multiFactor
     if (mfaProp.enrolledFactors.length < 1) {
       // await generateRecaptcha()
-      console.log('yes already enrolled')
       setAlreadyEnrolled(true)
       setEnrollable(false)
     }
@@ -66,7 +65,7 @@ const OptIn2FA = () => {
 
 
     const generateRecaptcha = () => {
-    console.log('fuck')
+    console.log('Generating reCaptcha')
     window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('2fa-captcha', {
       'size': 'invisible',
       'callback': (response) => {

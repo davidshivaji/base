@@ -50,11 +50,7 @@ const Login = ({ history }) => {
       ).catch(async (err) => {
         if (err.code === 'auth/multi-factor-auth-required') {
           await generateRecaptcha()
-          console.log(err.constructor.name)
-          console.log('caught error')
           window.resolver = err.resolver
-          console.log(Object.getOwnPropertyNames(err.resolver))
-          console.log(err.resolver)
 
           const phoneOpts = {
             multiFactorHint: window.resolver.hints[0],
@@ -77,7 +73,6 @@ const Login = ({ history }) => {
   const verifyLogin = async (e) => {
 
       e.preventDefault()
-      console.log(window.verificationId)
       const code = loginCodeRef.current.value
       const cred = new firebase.auth.PhoneAuthProvider.credential(
         // this isn't being defined. // not a valid string fsr.
@@ -91,8 +86,6 @@ const Login = ({ history }) => {
 
       const credential = await window.resolver.resolveSignIn(multiFactorAssertion)
 
-      console.log(credential)
-
       alert('logged in!')
       setOTPRequested(false)
 
@@ -101,10 +94,7 @@ const Login = ({ history }) => {
   const GoogleSignIn = () => {
     auth.signInWithPopup(provider)
     .then((result) => {
-      // const credential = firebase.auth.GoogleAuthProvider.credentialFromResult(result)
-      // const token = credential.accessToken
       const user = result.user
-      console.log(result)
 
       // getting the userDoc.
       database.users.where("userId", "==", result.user.uid).get()
@@ -113,15 +103,6 @@ const Login = ({ history }) => {
           setUserDoc(doc)
         })
       })
-
-
-      // firebase 9
-      // const q = query(usersRef, where("userId", "==", result.user.uid))
-      // onSnapshot(q, (snapshot) => {
-      //   snapshot.docs.forEach((doc) => {
-      //     setUserDoc(doc)
-      //   })
-      // })
 
       if (!userDoc) {
         database.users.add({
@@ -133,18 +114,6 @@ const Login = ({ history }) => {
         })
       }
 
-
-      // if (!userDoc) {
-      //   addDoc(collection(db, "users"), {
-      //     userId: result.user.uid,
-      //     email: result.user.email,
-      //     tier: 'bronze'
-      //   }).then(doc => console.log(doc.id)).catch(function failure(error){
-      //     // any other response will be an error object.
-      //     console.log(error.code, error.message)
-      //   })
-      // }
-
       history.push("/")
 
     }).catch(async (err) => {
@@ -152,11 +121,8 @@ const Login = ({ history }) => {
       // alert(error.message, error.email, credential)
       if (err.code === 'auth/multi-factor-auth-required') {
         await generateRecaptcha()
-        console.log(err.constructor.name)
-        console.log('caught error')
+
         window.resolver = err.resolver
-        console.log(Object.getOwnPropertyNames(err.resolver))
-        console.log(err.resolver)
 
         const phoneOpts = {
           multiFactorHint: window.resolver.hints[0],

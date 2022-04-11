@@ -15,7 +15,7 @@ const UnverifiedRoute = ({ component: RouteComponent, ...rest }) => {
     return (
       <Redirect to={"/already-verified"} />
     )
-    // no currentUser object.
+
   } else {
     return (
       <Redirect to={"/login"} />
