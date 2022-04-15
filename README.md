@@ -6,7 +6,7 @@ An extensive boilerplate React App and Express Server using Firebase v7 + Google
 [base.davidshivaji.com](https://base.davidshivaji.com)
 
 - Basic Navbar with Customized Routes.
-  - *App page is left empty.*
+  - *App route is left empty.*
 - Sidebar Menu toggle with logout button and subnavs for settings pages.
   - *Settings subnavs are both empty with no styling.*
   - Main settings page contains 2FA Option.
@@ -30,7 +30,7 @@ You can run the client react app without needing the server, unless you want to 
 
 ### 0. Clone this repo
 ```
-git clone https://github.com/davidshivaji/base.git
+git clone git@github.com:davidshivaji/base.git
 cd base
 npm run full-install
 ```
