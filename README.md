@@ -16,6 +16,7 @@ An extensive boilerplate React App and Express Server using Firebase v7 + Google
 ## Features
 
 - Authenticate with Email/Password or Google Account.
+- Require Email Verification.
 - Basic account management; change email, password, etc.
 - Optional 2-Factor Authentication with Phone Number.
 - Conditional Private Routes for User Account Tiers.
