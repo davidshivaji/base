@@ -424,7 +424,7 @@ form {
 }
 
 .user-profile {
-
+  border: solid 1px red;
   padding: 25px;
 }
 
@@ -440,7 +440,7 @@ form {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    border: solid 2px white;
+  border: solid 2px white;
   box-shadow: 0px 0px 20px 0px black;
   cursor: pointer;
 }
@@ -450,7 +450,7 @@ form {
   border-radius: 500px;
   margin-left: 0px;
   float: left;
-
+  border: solid 1px green;
 
 }
 
@@ -461,26 +461,28 @@ form {
 
 .user-metadata {
 
-  display: inline-block;
-  position: relative;
+  /* display: inline-block; */
+  display: block;
+  /* position: relative; */
   margin-top: 0;
   width: 250px;
   float: left;
   margin-left: 20px;
   padding: 20px;
   background-color: rgba(0,0,0,0.2);
+  border: solid 1px gold;
 
 }
 
 .user-name {
   font-weight: 800;
-
 }
 
 .bio {
   font-size: 12px;
   margin-top: 5px;
   padding-top: 20px;
+  border: solid 1px orange;
 }
 
 .fields {
@@ -492,7 +494,8 @@ form {
 }
 
 .change-details {
-  display: inline-block;
+  /* display: inline-block; */
+  display: grid;
   margin-top: 30px;
   margin-left: 50px;
   border: solid 1px green;
@@ -521,8 +524,21 @@ form {
 }
 
 .dpdiv {
+  margin-top: 20px;
   border: solid 1px teal;
   background-color: rgba(0,40,100,0.5);
+  text-align: left;
+}
+
+.dpdiv form {
+  text-align: left;
+  align-items: left;
+  /* margin: auto; */
+}
+
+.edit-state {
+  border: solid 1px blue;
+  /* display: block; */
 }
 
 

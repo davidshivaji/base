@@ -17,7 +17,7 @@ import Settings from './pages/Settings'
 import Pro from './pages/Pro'
 
 import Navbar from './Navbar'
-import Sidebar from './Sidebar/Sidebar'
+import Sidebar from './sidebar/Sidebar'
 
 import SignUp from './auth/SignUp'
 import Login from './auth/Login'

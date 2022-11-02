@@ -212,7 +212,6 @@ export const Account = () => {
             <div className="user-account-info">
             {currentUser.emailVerified ? <p>email verified</p> : <p>verify your email</p>}
             </div>
-            <div className="user-profile">
             <div className="profilepicturewrap">
             <img className="profilepicture" src={dP} alt="display picture" onClick={() => console.log('clicked')} onMouseOver={() => setShowDPChangeButton(true)} onMouseOut={() => setShowDPChangeButton(true)} />
             </div>
@@ -224,9 +223,8 @@ export const Account = () => {
             <br/>
             <br/>
             </div>
-            </div>
             {editState &&
-              <>
+              <div className="edit-state">
             <form className="change-details" onSubmit={changeDetails} action="">
                 <input value={dataemail} name="email" type="email" disabled={disabled} />
                 <input onChange={handleFirstNameChange} value={datafirstname} name="firstname" placeholder="First Name" type="text"/>
@@ -237,7 +235,7 @@ export const Account = () => {
             <EmailChange />
             <PasswordChange />
             <DisplayPicture randomThing={randomThing} setRandomThing={setRandomThing} />
-            </>
+            </div>
           }
 
         </div>
